@@ -14,7 +14,7 @@
         overflow: hidden;
         width: 90%;
         padding-top: 50.625%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-        border: 2px solid white;
+        border: 2px solid rgb(231, 231, 231);
       }
 
       /* Then style the iframe to fit in the container div with full height and width */
@@ -27,6 +27,14 @@
         width: 100%;
         height: 100%;
       }
+      /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+    
+        width: 72%;
+        padding-top: 40.5%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+      
+}}
       .main {
         display: flex;
         align-items: center;
