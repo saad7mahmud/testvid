@@ -3,47 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-.vid{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-body{
-  background-color: rgb(5, 36, 31);
-}
-.vid1{
-  border: 4px solid rgb(255, 255, 255);
-}
-@media only screen and (max-width: 600px) {
-  .vid1{
-    width: 320px;
-    height: 180px;
-  }
-}
+      body {
+        background-color: rgb(29, 1, 54);
+      }
+      .container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        border: 2px solid white;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .head {
+        display: flex;
+
+        justify-content: center;
+        color: white;
+      }
     </style>
   </head>
   <body>
-   
-   
-      <div class="vid">
-        
-        <div><iframe class="vid1"
-          width="960"
-          height="540"
-          src="https://player.vimeo.com/video/773041601?h=9270897f09&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-        >
-        </iframe></div>
-        <br>
-        <br>
-        <div><iframe class="vid1"
-          width="960"
-          height="540"
-          src="https://www.youtube.com/embed/uiDN5KRhLHY"
-        >
-        </iframe></div>
+    <div class="head">
+      <h1>This is header</h1>
+    </div>
+    <div class="main">
+      <div class="container">
+        <iframe
+          class="responsive-iframe"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        ></iframe>
       </div>
     </div>
   </body>
